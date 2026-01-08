@@ -8,17 +8,26 @@
       font-family: Arial;
       margin:0;
       color:#333;
-      /* Background image */
       background: url("image/home.jpeg") no-repeat center center fixed;
       background-size: cover;
     }
-    header { background:rgba(255,77,166,0.9); color:white; text-align:center; padding:1rem; }
-    nav a { margin:0 10px; color:white; text-decoration:none; font-weight:bold; }
+    header { 
+      background:rgba(255,77,166,0.9); 
+      color:white; 
+      text-align:center; 
+      padding:1rem; 
+    }
+    nav a { 
+      margin:0 10px; 
+      color:white; 
+      text-decoration:none; 
+      font-weight:bold; 
+    }
     nav a:hover { color:#ffe6f0; }
     main { padding:2rem; text-align:center; }
 
     .about-card {
-      background:rgba(255,255,255,0.85); /* semi-transparent so background shows */
+      background:rgba(255,255,255,0.85);
       border:6px solid hotpink;
       border-radius:15px;
       max-width:800px;
@@ -32,29 +41,50 @@
 
     .about {
       display:flex;
-      justify-content:center;
+      flex-direction:column; /* video atas, table bawah */
       align-items:center;
       gap:2rem;
     }
-    .about p {
-      flex:1;
-      text-align:justify;
+    .about table {
+      border-collapse:collapse;
+      margin:0 auto;
       color:#cc0066;
+      width:70%;
     }
-    .about img {
-      flex:1;
-      max-width:250px;
+    .about table th, .about table td {
+      border:2px solid hotpink;
+      padding:8px 12px;
+      text-align:left;
+    }
+    .about table th {
+      background:#ffe6f0;
+      color:#ff1493;
+      width:40%;
+    }
+    .about video {
+      max-width:100%;
       border-radius:10px;
       border:6px solid #ff4da6;
       box-shadow:2px 2px 8px rgba(255,105,180,0.4);
     }
 
-    footer { background:rgba(255,77,166,0.9); color:white; text-align:center; padding:1rem; margin-top:2rem; }
+    .extra-text {
+      margin-top:1.5rem;
+      text-align:justify;
+      color:#cc0066;
+    }
 
-    /* Stack on small screens */
+    footer { 
+      background:rgba(255,77,166,0.9); 
+      color:white; 
+      text-align:center; 
+      padding:1rem; 
+      margin-top:2rem; 
+    }
+
     @media (max-width:700px) {
-      .about { flex-direction:column; }
-      .about p { text-align:center; }
+      .about table { width:100%; }
+      .extra-text { text-align:center; }
     }
   </style>
 </head>
@@ -75,12 +105,40 @@
       <h1>This Is My Simple Biodata</h1>
       <h4>"Every story has a beginning, and this is a little about mine 🌷"</h4>
       <div class="about">
-        <p>Hello, everyone! My name is Nur Shamimi Intan Lyana binti Zulhisham.  
-        I was born on 07 October 2005 in Taiping, Perak, and now I live in Sungai Buloh, Selangor with my parents, siblings, and my beloved uncle.  
-        I am the second child in a family of four siblings, all still studying.  
-        My family is strict with me because I am a clumsy and childish person — they worry I might get into accidents or problems.  
-        But all of this makes me stronger and shapes who I am today 💖.</p>
-        <img src="image/pantai.jpg" alt="Photo of Mimie">
+        <!-- Video (Landscape, Auto-play with sound, Loop, Controls) -->
+        <video autoplay loop playsinline controls>
+          <source src="video/about.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Personal Info Table -->
+        <table>
+          <tr>
+            <th>Full Name</th>
+            <td>Nur Shamimi Intan Lyana binti Zulhisham</td>
+          </tr>
+          <tr>
+            <th>Date of Birth</th>
+            <td>07 October 2005</td>
+          </tr>
+          <tr>
+            <th>Place of Birth</th>
+            <td>Taiping, Perak</td>
+          </tr>
+          <tr>
+            <th>Current Residence</th>
+            <td>Sungai Buloh, Selangor</td>
+          </tr>
+          <tr>
+            <th>Family</th>
+            <td>Second child of four siblings, living with parents and beloved uncle</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Extra text remains in paragraph -->
+      <div class="extra-text">
+        My family is strict with me because I am a clumsy and childish person — they worry I might get into accidents or problems. But all of this makes me stronger and shapes who I am today 💖.
       </div>
     </div>
   </main>
