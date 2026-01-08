@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Mimie</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin:0;
+      color:#333;
+      /* Background image */
+      background: url("image/home.jpeg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+    }
+    nav a {
+      margin:0 10px;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav a:hover { color:#ffe6f0; }
+    main { padding:2rem; text-align:center; }
+
+    /* Section card */
+    .section {
+      background:rgba(255,255,255,0.85);
+      border:6px solid hotpink;
+      border-radius:15px;
+      max-width:1000px;
+      margin:2rem auto;
+      padding:1.5rem;
+      box-shadow:2px 2px 10px rgba(255,105,180,0.3);
+    }
+    .section h2 {
+      color:#ff1493;
+      font-family:"Comic Sans MS", cursive, sans-serif;
+      margin-bottom:1rem;
+    }
+
+    /* Polaroid gallery */
+    .gallery {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1.5rem;
+    }
+    .polaroid {
+      background:white;
+      padding:10px;
+      border:1px solid #ccc;
+      box-shadow:2px 2px 8px rgba(0,0,0,0.3);
+      border-radius:5px;
+      width:180px;
+      text-align:center;
+      transform: rotate(-2deg);
+      transition: transform 0.3s ease;
+    }
+    .polaroid:nth-child(even) {
+      transform: rotate(2deg);
+    }
+    .polaroid:hover {
+      transform: scale(1.05);
+    }
+    .polaroid img {
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:5px;
+    }
+
+    footer {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+      margin-top:2rem;
+    }
+
+    /* Intro text */
+    .intro {
+      background:rgba(255,255,255,0.85);
+      border:4px solid hotpink;
+      border-radius:12px;
+      max-width:800px;
+      margin:2rem auto;
+      padding:1rem;
+      font-size:1.1rem;
+      color:#cc0066;
+      font-weight:bold;
+      box-shadow:2px 2px 8px rgba(255,105,180,0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gallery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="education.html">Education & Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="hobbies.html">Hobbies & Passion</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Intro Section -->
+    <div class="intro">
+      <p>✨ Welcome to my gallery! Here you’ll find snapshots of my life — from family, friends, housemates, food, and even Lotso 🧸. Scroll down and enjoy the memories 💖</p>
+      <p>🎶 "Psst... turn the music on, let the vibes flow ✨ Some memories are best felt with a little melody.”</p>
+      <audio controls>
+        <source src="audio/ed.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Me Section -->
+    <div class="section">
+      <h2>🌸 Me</h2>
+      <div class="gallery">
+        <div class="polaroid"><img src="image/s1.jpg"></div>
+        <div class="polaroid"><img src="image/s2.jpg"></div>
+        <div class="polaroid"><img src="image/s3.jpg"></div>
+        <div class="polaroid"><img src="image/s4.jpg"></div>
+        <div class="polaroid"><img src="image/s5.jpg"></div>
+        <div class="polaroid"><img src="image/s6.jpg"></div>
+      </div>
+    </div>
+
+    <!-- Family Section -->
+    <div class="section">
+      <h2>👨‍👩‍👧 Family</h2>
+      <div class="gallery">
+        <div class="polaroid"><img src="image/f1.jpg"></div>
+        <div class="polaroid"><img src="image/f2.jpg"></div>
+        <div class="polaroid"><img src="image/f3.jpg"></div>
+        <div class="polaroid"><img src="image/f4.jpg"></div>
+        <div class="polaroid"><img src="image/f5.jpg"></div>
+        <div class="polaroid"><img src="image/f6.jpg"></div>
+      </div>
+    </div>
+
+    <!-- My Trio Section -->
+    <div class="section">
+      <h2>💞 My Trio</h2>
+      <div class="gallery">
+        <div class="polaroid"><img src="image/t1.jpg"></div>
+        <div class="polaroid"><img src="image/t2.jpg"></div>
+        <div class="polaroid"><img src="image/t3.jpg"></div>
+        <div class="polaroid"><img src="image/t4.jpg"></div>
+        <div class="polaroid"><img src="image/t5.jpg"></div>
+        <div class="polaroid"><img src="image/t6.jpg"></div>
+      </div>
+    </div>
+
+    <!-- My Housemates Section -->
+    <div class="section">
+      <h2>🏠 My Housemates</h2>
+      <div class="gallery">
+        <div class="polaroid"><img src="image/k1.jpg"></div>
+        <div class="polaroid"><img src="image/k2.jpg"></div>
+        <div class="polaroid"><img src="image/k3.jpg"></div>
+        <div class="polaroid"><img src="image/k4.jpg"></div>
+        <div class="polaroid"><img src="image/k5.jpg"></div>
+        <div class="polaroid"><img src="image/k6.jpg"></div>
+      </div>
+    </div>
+
+    <!-- Food Section -->
+    <div class="section">
+      <h2>🍜 Food</h2>
+      <div class="gallery">
+        <div class="polaroid"><img src="image/m1.jpg"></div>
+        <div class="polaroid"><img src="image/m2.jpg"></div>
+        <div class="polaroid"><img src="image/m3.jpg"></div>
+        <div class="polaroid"><img src="image/m4.jpg"></div>
+        <div class="polaroid"><img src="image/m5.jpg"></div>
+        <div class="polaroid"><img src="image/m6.jpg"></div>
+      </div>
+    </div>
+
+    <!-- Lotso Section -->
+    <div class="section">
+      <h2>🧸 Lotso</h2>
+      <div class="gallery">
+        <div class="polaroid"><img src="image/l1.jpg"></div>
+        <div class="polaroid"><img src="image/l2.jpg"></div>
+        <div class="polaroid"><img src="image/l3.jpg"></div>
+        <div class="polaroid"><img src="image/l4.jpg"></div>
+        <div class="polaroid"><img src="image/l5.jpg"></div>
+        <div class="polaroid"><img src="image/l6.jpg"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 Mimie</p>
+  </footer>
+</body>
+</html>

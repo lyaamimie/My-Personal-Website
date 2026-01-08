@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hobbies & Passion - Mimie</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin:0;
+      color:#333;
+      /* Background image */
+      background: url("image/home.jpeg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+    }
+    nav a {
+      margin:0 10px;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav a:hover { color:#ffe6f0; }
+    main { padding:2rem; }
+
+    /* Section card */
+    .card {
+      background:rgba(255,255,255,0.9); /* semi-transparent so background shows */
+      border:6px solid hotpink;
+      border-radius:15px;
+      max-width:900px;
+      margin:2rem auto;
+      padding:1.5rem;
+      box-shadow:2px 2px 10px rgba(255,105,180,0.3);
+      text-align:center;
+    }
+    .card h2 {
+      color:#ff1493;
+      font-family:"Comic Sans MS", cursive, sans-serif;
+      margin-bottom:1rem;
+    }
+
+    /* Gallery grid centered */
+    .gallery {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center; /* center images */
+      gap:1rem;
+      margin-top:1rem;
+    }
+    .gallery img {
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:15px;
+      border:4px solid #ff4da6;
+      box-shadow:2px 2px 8px rgba(255,105,180,0.4);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05); /* cheerful hover effect */
+    }
+
+    /* Single caption */
+    .section-caption {
+      font-size:1rem;
+      color:#cc0066;
+      margin-top:1rem;
+      font-weight:bold;
+    }
+
+    footer {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+      margin-top:2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hobbies & Passion</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="education.html">Education & Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Hobby Section -->
+    <div class="card">
+      <h2>🌸 My Hobby</h2>
+      <div class="gallery">
+        <img src="image/h1.jpg" alt="Hobby photo 1">
+        <img src="image/h2.jpg" alt="Hobby photo 2">
+        <img src="image/h3.jpg" alt="Hobby photo 3">
+        <img src="image/h4.jpg" alt="Hobby photo 4">
+        <img src="image/h5.jpg" alt="Hobby photo 5">
+        <img src="image/h6.jpg" alt="Hobby photo 6">
+      </div>
+      <div class="section-caption">"One of my favourite hobbies is spending time with my friends — laughing, talking, just being present. Deep down, I’m scared that as we grow older, life will pull us in different directions. So while we still can, I hold onto these moments a little tighter."</div>
+    </div>
+
+    <!-- Passion Section -->
+    <div class="card">
+      <h2>💖 My Passion</h2>
+      <div class="gallery">
+        <img src="image/p1.jpg" alt="Passion photo 1">
+        <img src="image/p2.jpg" alt="Passion photo 2">
+        <img src="image/p3.jpg" alt="Passion photo 3">
+        <img src="image/p4.jpg" alt="Passion photo 4">
+        <img src="image/p5.jpg" alt="Passion photo 5">
+        <img src="image/p6.jpg" alt="Passion photo 6">
+      </div>
+      <div class="section-caption">"I love snapping photos of cats — each picture feels like a little story. One day, I dream of opening a shelter for stray cats, so they’ll have a safe and loving place to call home."</div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 Mimie</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mimie's Life Journey</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin:0;
+      color:#333;
+      background: url("image/kucing.jpeg") no-repeat center center fixed; /* background picture */
+      background-size: cover;
+    }
+    header {
+      background:rgba(255,77,166,0.9); /* semi-transparent pink */
+      color:white;
+      text-align:center;
+      padding:1rem;
+    }
+    nav a {
+      margin:0 10px;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav a:hover { color:#ffe6f0; }
+    main {
+      padding:2rem;
+      text-align:center;
+    }
+    .welcome-card {
+      background:rgba(255,255,255,0.85);
+      border:6px solid hotpink;
+      border-radius:15px;
+      max-width:600px;
+      margin:2rem auto;
+      padding:1.5rem;
+      box-shadow:2px 2px 10px rgba(255,105,180,0.4);
+    }
+    .welcome-card h2 {
+      color:#ff1493;
+      font-family:"Comic Sans MS", cursive, sans-serif;
+      margin-bottom:1rem;
+    }
+    .welcome-card p {
+      color:#cc0066;
+      font-size:1.1rem;
+    }
+
+    /* Cheerful clock style */
+    .clock {
+      margin-top:1.5rem;
+      font-family:"Comic Sans MS", cursive, sans-serif;
+      font-size:2rem;
+      font-weight:bold;
+      color:#ff1493;
+      background:#fff0f5;
+      border:4px solid hotpink;
+      border-radius:12px;
+      display:inline-block;
+      padding:10px 20px;
+      box-shadow:2px 2px 8px rgba(255,105,180,0.4);
+    }
+
+    footer {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+      margin-top:2rem;
+      position: fixed;   /* stays at bottom */
+      bottom: 0;         /* attach to bottom */
+      width: 100%;       /* full width */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌸 Mimie's Life Journey 🌸</h1>
+    <nav>
+      <a href="about.html">About Me</a>
+      <a href="education.html">Education & Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="hobbies.html">Hobbies & Passion</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="welcome-card">
+      <h2>Welcome to My World 💖</h2>
+      <p>
+        Hi, I’m Mimie! This website is a cheerful space where I share my story, passions, and memories.  
+        Click the links above to explore my journey 🌷✨
+      </p>
+      <!-- Cheerful Clock -->
+      <div id="clock" class="clock">00:00:00</div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 Mimie</p>
+  </footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let h = String(now.getHours()).padStart(2, '0');
+      let m = String(now.getMinutes()).padStart(2, '0');
+      let s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = h + ":" + m + ":" + s;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>

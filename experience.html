@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Experience - Mimie</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin:0;
+      color:#333;
+      /* Background image */
+      background: url("image/home.jpeg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+    }
+    nav a {
+      margin:0 10px;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    nav a:hover { color:#ffe6f0; }
+    main { padding:2rem; }
+
+    /* Section card */
+    .card {
+      background:rgba(255,255,255,0.9); /* semi-transparent so background shows */
+      border:6px solid hotpink;
+      border-radius:15px;
+      max-width:900px;
+      margin:2rem auto;
+      padding:1.5rem;
+      box-shadow:2px 2px 10px rgba(255,105,180,0.3);
+      text-align:center;
+    }
+    .card h2 {
+      color:#ff1493;
+      font-family:"Comic Sans MS", cursive, sans-serif;
+      margin-bottom:1rem;
+    }
+
+    /* Gallery grid centered */
+    .gallery {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1rem;
+      margin-top:1rem;
+    }
+    .gallery img {
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:15px;
+      border:4px solid #ff4da6;
+      box-shadow:2px 2px 8px rgba(255,105,180,0.4);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Caption */
+    .section-caption {
+      font-size:1rem;
+      color:#cc0066;
+      margin-top:1rem;
+      font-weight:bold;
+    }
+
+    footer {
+      background:rgba(255,77,166,0.9);
+      color:white;
+      text-align:center;
+      padding:1rem;
+      margin-top:2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Experience</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="education.html">Education & Skills</a>
+      <a href="hobbies.html">Hobbies & Passion</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <!-- Experience 1 -->
+    <div class="card">
+      <h2>🌸 Experience 1: Part-Time Job as Bomboloni Seller</h2>
+      <div class="gallery">
+        <img src="image/e1.jpg" alt="Experience 1 photo 1">
+        <img src="image/e2.jpg" alt="Experience 1 photo 2">
+        <img src="image/e3.jpg" alt="Experience 1 photo 3">
+      </div>
+      <div class="section-caption">“I once spent my time selling bomboloni and had fun meeting new people while learning a little about business.”</div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="card">
+      <h2>💖 Experience 2: Part-Time Job as Tuition Teacher</h2>
+      <div class="gallery">
+        <img src="image/e4.jpg" alt="Experience 2 photo 1">
+        <img src="image/e5.jpg" alt="Experience 2 photo 2">
+        <img src="image/e6.jpg" alt="Experience 2 photo 3">
+      </div>
+      <div class="section-caption">“I also worked as a tuition teacher on semester break, enjoying the moments of helping students learn and understand their lessons better.”</div>
+    </div>
+
+    <!-- Experience 3 -->
+    <div class="card">
+      <h2>✨ Experience 3: Part-Time Job as Caterer</h2>
+      <div class="gallery">
+        <img src="image/e7.jpg" alt="Experience 3 photo 1">
+        <img src="image/e8.jpg" alt="Experience 3 photo 2">
+        <img src="image/e9.jpg" alt="Experience 3 photo 3">
+        <img src="image/e10.jpg" alt="Experience 3 photo 4">
+        <img src="image/e11.jpg" alt="Experience 3 photo 5">
+        <img src="image/e12.jpg" alt="Experience 3 photo 6">
+      </div>
+      <div class="section-caption">“Since high school until now, I’ve been working as a caterer, gaining hands-on experience, teamwork skills, and lots of memorable moments.”</div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2026 Mimie</p>
+  </footer>
+</body>
+</html>
