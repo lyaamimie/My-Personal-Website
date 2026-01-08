@@ -8,11 +8,11 @@
       font-family: Arial;
       margin:0;
       color:#333;
-      background: url("image/kucing.jpeg") no-repeat center center fixed; /* background picture */
+      background: url("image/kucing.jpeg") no-repeat center center fixed;
       background-size: cover;
     }
     header {
-      background:rgba(255,77,166,0.9); /* semi-transparent pink */
+      background:rgba(255,77,166,0.9);
       color:white;
       text-align:center;
       padding:1rem;
@@ -24,10 +24,7 @@
       font-weight:bold;
     }
     nav a:hover { color:#ffe6f0; }
-    main {
-      padding:2rem;
-      text-align:center;
-    }
+    main { padding:2rem; text-align:center; }
     .welcome-card {
       background:rgba(255,255,255,0.85);
       border:6px solid hotpink;
@@ -47,9 +44,17 @@
       font-size:1.1rem;
     }
 
+    /* Container untuk jam + gif */
+    .clock-container {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:15px; /* jarak antara jam dan gif */
+      margin-top:1.5rem;
+    }
+
     /* Cheerful clock style */
     .clock {
-      margin-top:1.5rem;
       font-family:"Comic Sans MS", cursive, sans-serif;
       font-size:2rem;
       font-weight:bold;
@@ -62,15 +67,62 @@
       box-shadow:2px 2px 8px rgba(255,105,180,0.4);
     }
 
+    .truck-gif {
+      width:80px;   /* saiz gif */
+      height:auto;
+      border-radius:10px;
+      border:3px solid hotpink;
+      box-shadow:2px 2px 8px rgba(255,105,180,0.4);
+    }
+
     footer {
       background:rgba(255,77,166,0.9);
       color:white;
       text-align:center;
       padding:1rem;
       margin-top:2rem;
-      position: fixed;   /* stays at bottom */
-      bottom: 0;         /* attach to bottom */
-      width: 100%;       /* full width */
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Popup notification style */
+    .popup {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.5);
+      justify-content:center;
+      align-items:center;
+    }
+    .popup-content {
+      background:#fff0f5;
+      border:4px solid hotpink;
+      border-radius:15px;
+      padding:20px;
+      max-width:400px;
+      text-align:center;
+      box-shadow:2px 2px 10px rgba(255,105,180,0.5);
+      color:#cc0066;
+      font-family:"Comic Sans MS", cursive, sans-serif;
+    }
+    .popup-content h3 {
+      margin-top:0;
+      color:#ff1493;
+    }
+    .popup-content button {
+      margin-top:15px;
+      padding:8px 16px;
+      background:#ff4da6;
+      color:white;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+    .popup-content button:hover {
+      background:#e60073;
     }
   </style>
 </head>
@@ -93,15 +145,28 @@
         Hi, I’m Mimie! This website is a cheerful space where I share my story, passions, and memories.  
         Click the links above to explore my journey 🌷✨
       </p>
-      <!-- Cheerful Clock -->
-      <div id="clock" class="clock">00:00:00</div>
+      <!-- Cheerful Clock + Truck GIF -->
+      <div class="clock-container">
+        <div id="clock" class="clock">00:00:00</div>
+        <img src="image/baby.gif" alt="Cute Truck GIF" class="truck-gif">
+      </div>
     </div>
   </main>
   <footer>
     <p>&copy; 2026 Mimie</p>
   </footer>
 
+  <!-- Popup Notification -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h3>🌸 Hello & Welcome! 🌸</h3>
+      <p>Thanks for visiting Mimie's Life Journey 💖 Enjoy exploring my world!</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
   <script>
+    // Clock
     function updateClock() {
       const now = new Date();
       let h = String(now.getHours()).padStart(2, '0');
@@ -111,6 +176,14 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
+    // Popup
+    window.onload = function() {
+      document.getElementById('popup').style.display = 'flex';
+    }
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
   </script>
 </body>
 </html>
